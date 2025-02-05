@@ -2,11 +2,11 @@
 developed by: 1ikill
 
 ## Manual:
-- Load .csv file with questions in the resources/questions directory
+- Load .csv file with questions in the resources/questions directory.
 - Change "inputCsvFile" variable in Main class to questions/<yourFileName.csv>
 - Change "outputXmlName" variable in Main class with desired name of output .xml file.
-- Change "outputDirectory" variable in Main class with desired directory of the output file
-- Run main class
+- Change "outputDirectory" variable in Main class with desired directory of the output file.
+- Run main class.
 
 After completing manual steps the file with chosen name should appear in chosen directory and ready for import into moodle quiz.
 
