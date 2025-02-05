@@ -1,0 +1,85 @@
+Question,fixed answers order,description,programming language,type,proficiency,pictureUrl,audioUrl,videoUrl,value,isCorrect,questionClass,hint
+What will be the output of the following Java code ?,FALSE,"<pre><code>class Newthread extends Thread {
+        Newthread() {
+                super(""My Thread"");
+                start();
+        }
+        public void run() {
+                System.out.println(this);
+        }
+}
+class Multithreaded_Programming {
+        public static void main(String args[]) {
+                new Newthread();
+        }
+}</code></pre>",java,SINGLE,1,,,,My Thread,FALSE,EXAM,
+,,,,,,,,,"Thread[My Thread,5,main]",TRUE,,
+,,,,,,,,,Compilation Error,FALSE,,
+,,,,,,,,,Runtime Error,FALSE,,
+,,,,,,,,,,,,
+What will be the result of executing the following code?,FALSE,"<pre><code>class Test extends Thread {
+	public void run() {
+		System.out.println(""Run"");
+	}
+}
+class Myclass {
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.start();
+	}
+}</code></pre>",java,SINGLE,1,,,,One thread created,FALSE,EXAM,
+,,,,,,,,,Two thread created,TRUE,,
+,,,,,,,,,Depend upon system,FALSE,,
+,,,,,,,,,No thread created,FALSE,,
+,,,,,,,,,,,,
+"Which Set class must be preferred in multi-threading environment, considering performance constraint?",FALSE,,,SINGLE,1,,,,HashSet,FALSE,EXAM,
+,,,,,,,,,ConcurrentSkipListSet,TRUE,,
+,,,,,,,,,LinkedHashSet,FALSE,,
+,,,,,,,,,CopyOnWriteArraySet,FALSE,,
+,,,,,,,,,,,,
+Which FOUR of the following statements about the Callable call() and Runnable run() methods are correct?,FALSE,,,MULTIPLE,1,,,,Both can throw unchecked exceptions,TRUE,EXAM,
+,,,,,,,,,Callable takes a generic method argument,FALSE,,
+,,,,,,,,,Callable can throw a checked exception.,TRUE,,
+,,,,,,,,,Both can be implemented with lambda expressions,TRUE,,
+,,,,,,,,,Runnable returns a generic type.,FALSE,,
+,,,,,,,,,Callable returns a generic type.,TRUE,,
+,,,,,,,,,Both methods return void.,FALSE,,
+,,,,,,,,,,,,
+Which TWO signatures of the following methods maybe using in Runnable interface?,FALSE,,,MULTIPLE,1,,,,void run(),TRUE,EXAM,
+,,,,,,,,,public void run(),TRUE,,
+,,,,,,,,,public void start(),FALSE,,
+,,,,,,,,,void start(),FALSE,,
+,,,,,,,,,void notifyAll(),FALSE,,
+,,,,,,,,,void killThread(),FALSE,,
+,,,,,,,,,,,,
+What is the output of the following Java snippet?,TRUE,"<pre><code>class ThreadDemo implements Runnable {
+	private Thread t;
+	private String threadName;
+	ThreadDemo (String threadName){
+		this.threadName = threadName;
+	}
+	public void run() {
+		while (true)
+			System.out.print(threadName);
+	}
+	public void start () {
+		if (t == null) {
+			t = new Thread(this, threadName);
+			t.start ();
+		}
+	}
+}
+public class TestThread {
+	public static void main(String args[]) {
+		ThreadDemo zero = new ThreadDemo( ""0"");
+		ThreadDemo one = new ThreadDemo( ""1"");
+		zero.start();
+		one.start();
+	}
+}</code></pre>",java,SINGLE,1,,,,01010101... (Pattern repeats),FALSE,EXAM,
+,,,,,,,,,1010101010... (Pattern repeats),FALSE,,
+,,,,,,,,,001001001001... (Pattern repeats),FALSE,,
+,,,,,,,,,Pattern cannot be predicted and can vary each time the program is run.,TRUE,,
+,,,,,,,,,Compile time error,FALSE,,
+,,,,,,,,,An exception is thrown at Runtime ,FALSE,,
+,,,,,,,,,None of these,FALSE,,
